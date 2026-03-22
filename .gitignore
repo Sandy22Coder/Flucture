@@ -1,0 +1,13 @@
+﻿venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+stream/
+reports/
+posture_log.csv
+
+.env
+.DS_Store
+Thumbs.db

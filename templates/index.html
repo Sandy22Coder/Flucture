@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flucture AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">GenAI Posture Intelligence</p>
+        <h1>Flucture AI Posture Assessment</h1>
+        <p class="lead">
+          Convert live posture tracking into a grounded report covering what is wrong, why it matters,
+          how to improve, and the best remedies to start with.
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge">Live monitoring</span>
+          <span class="hero-badge">Desk posture focus</span>
+          <span class="hero-badge">AI recovery report</span>
+        </div>
+        <div class="actions">
+          <button id="startBtn">Start Tracking</button>
+          <button id="stopBtn" class="secondary">Stop Tracking</button>
+          <button id="reportBtn" class="accent">Generate AI Report</button>
+          <button id="notifyBtn" class="secondary">Enable Alerts</button>
+        </div>
+        <p id="reportStatus" class="report-status hidden"></p>
+        <p id="alertStatus" class="alert-status hidden"></p>
+        <div id="reportActions" class="report-actions hidden">
+          <a id="downloadPdfLink" class="download-link" href="#" target="_blank" rel="noopener">Download PDF Report</a>
+        </div>
+        <div class="quick-guide">
+          <strong>How to test</strong>
+          <ol>
+            <li>Click Start Tracking.</li>
+            <li>Wait for calibration.</li>
+            <li>Keep good posture for a few seconds, then slouch deliberately.</li>
+            <li>Click Generate AI Report.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="status-card">
+        <p class="label">Live status</p>
+        <h2 id="postureLabel">Calibrating</h2>
+        <p id="reviewText">Waiting for tracker...</p>
+        <div class="status-row">
+          <p class="status-chip">Tracker: <span id="trackerStatus">Offline</span></p>
+          <span id="postureBadge" class="posture-badge neutral">Waiting</span>
+        </div>
+        <p id="trackerError" class="tracker-error hidden"></p>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="panel video-panel">
+        <div class="panel-head">
+          <h3>Live Camera Stream</h3>
+          <span>MJPEG preview</span>
+        </div>
+        <img id="stream" src="/stream" alt="Posture stream">
+      </div>
+
+      <div class="panel metrics-panel">
+        <div class="panel-head">
+          <h3>Session Metrics</h3>
+          <span>Live threshold comparison</span>
+        </div>
+        <div id="metricsGrid" class="metrics-grid"></div>
+      </div>
+    </section>
+
+    <section class="report-grid">
+      <article class="panel report-summary-panel">
+        <div class="panel-head"><h3>Report Summary</h3></div>
+        <div id="summaryBlock" class="list-block empty">Your plain-language session summary will appear here.</div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h3>What’s Wrong</h3></div>
+        <div id="wrongList" class="list-block empty">Generate a report to view issue analysis.</div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h3>Possible Consequences</h3></div>
+        <div id="riskList" class="list-block empty">Risk analysis will appear here.</div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h3>How To Improve</h3></div>
+        <div id="improvementList" class="list-block empty">Improvement steps will appear here.</div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h3>Remedies</h3></div>
+        <div id="remedyList" class="list-block empty">Stretches, strengthening, and habits will appear here.</div>
+      </article>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

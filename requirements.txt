@@ -1,0 +1,6 @@
+Flask==3.0.0
+opencv-python>=4.8
+mediapipe==0.10.14
+numpy>=1.23
+requests>=2.31
+reportlab>=4.0

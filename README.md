@@ -7,7 +7,7 @@ It combines:
 - seated-friendly posture evaluation
 - AI-generated posture explanation and correction reports
 - downloadable PDF reports for later review
-- background alerts through browser title, favicon, and notifications
+- background alerts through browser title, favicon, and notifications.
 
 The main idea is simple: keep Flucture AI running in one tab while you work in another. When your posture starts slipping, the app can alert you. When you want a deeper review, it generates a clear report explaining what is wrong, what issues it may cause, and how to improve.
 

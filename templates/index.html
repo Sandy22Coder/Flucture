@@ -10,17 +10,7 @@
   <main class="page">
     <section class="hero">
       <div>
-        <p class="eyebrow">GenAI Posture Intelligence</p>
         <h1>Flucture AI Posture Assessment</h1>
-        <p class="lead">
-          Convert live posture tracking into a grounded report covering what is wrong, why it matters,
-          how to improve, and the best remedies to start with.
-        </p>
-        <div class="hero-badges">
-          <span class="hero-badge">Live monitoring</span>
-          <span class="hero-badge">Desk posture focus</span>
-          <span class="hero-badge">AI recovery report</span>
-        </div>
         <div class="actions">
           <button id="startBtn">Start Tracking</button>
           <button id="stopBtn" class="secondary">Stop Tracking</button>
@@ -42,35 +32,38 @@
           </ol>
         </div>
       </div>
-      <div class="status-card">
-        <p class="label">Live status</p>
-        <h2 id="postureLabel">Calibrating</h2>
-        <p id="reviewText">Waiting for tracker...</p>
-        <div class="status-row">
-          <p class="status-chip">Tracker: <span id="trackerStatus">Offline</span></p>
-          <span id="postureBadge" class="posture-badge neutral">Waiting</span>
-        </div>
-        <p id="trackerError" class="tracker-error hidden"></p>
-      </div>
+
     </section>
 
-    <section class="dashboard">
-      <div class="panel video-panel">
-        <div class="panel-head">
-          <h3>Live Camera Stream</h3>
-          <span>MJPEG preview</span>
-        </div>
-        <img id="stream" src="/stream" alt="Posture stream">
-      </div>
+<section class="dashboard">
+  <div class="panel video-panel">
+    <div class="panel-head">
+      <h3>Live Camera Stream</h3>
+      <span>MJPEG preview</span>
+    </div>
+    <img id="stream" src="/stream" alt="Posture stream">
+  </div>
 
-      <div class="panel metrics-panel">
-        <div class="panel-head">
-          <h3>Session Metrics</h3>
-          <span>Live threshold comparison</span>
-        </div>
-        <div id="metricsGrid" class="metrics-grid"></div>
-      </div>
-    </section>
+  <!-- 🔥 ADD STATUS CARD HERE -->
+  <div class="status-card">
+    <p class="label">Live status</p>
+    <h2 id="postureLabel">Calibrating</h2>
+    <p id="reviewText">Waiting for tracker...</p>
+    <div class="status-row">
+      <p class="status-chip">Tracker: <span id="trackerStatus">Offline</span></p>
+      <span id="postureBadge" class="posture-badge neutral">Waiting</span>
+    </div>
+    <p id="trackerError" class="tracker-error hidden"></p>
+  </div>
+
+  <div class="panel metrics-panel">
+    <div class="panel-head">
+      <h3>Session Metrics</h3>
+      <span>Live threshold comparison</span>
+    </div>
+    <div id="metricsGrid" class="metrics-grid"></div>
+  </div>
+</section>
 
     <section class="report-grid">
       <article class="panel report-summary-panel">
